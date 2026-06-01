@@ -1,0 +1,17 @@
+{
+  "name": "ai-timetable-generator",
+  "private": true,
+  "version": "0.1.0",
+  "workspaces": ["client", "server"],
+  "scripts": {
+    "dev": "concurrently \"npm --workspace client run dev\" \"npm --workspace server run dev\"",
+    "install-all": "npm install",
+    "client": "npm --workspace client run dev",
+    "server": "npm --workspace server run dev",
+    "build": "npm --workspace client run build && npm --workspace server run build",
+    "start": "echo \"Run client and server individually with npm run client and npm run server\""
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.0"
+  }
+}
